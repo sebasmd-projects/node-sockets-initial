@@ -68,6 +68,10 @@
 
         });
 
+        client.on('connect', () => {
+            console.log('Conectado');
+        });
+
         client.on('mensaje-al-cliente', (data) => {
             console.log(data);
             mensajes.innerHTML += `<li>${data.texto}</li>`;
